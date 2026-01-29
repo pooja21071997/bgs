@@ -1,0 +1,87 @@
+<nav class="navbar navbar-expand-lg bg-white px-4">
+  <div class="container-fluid">
+    <!-- Logo -->
+    <a class="navbar-brand" href="#">
+      <img src="assets/images/navbar.png" height="65" />
+    </a>
+
+    <!-- Hamburger button -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#mainNavbar"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Collapsible Menu -->
+    <div class="collapse navbar-collapse" id="mainNavbar">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link fw-semibold" routerLink="/">HOME</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link fw-semibold" routerLink="/about">ABOUT US</a>
+        </li>
+
+        <!-- SECTION Dropdown -->
+        <li class="nav-item dropdown">
+          <a class="nav-link fw-semibold dropdown-toggle" role="button" data-bs-toggle="dropdown">
+            Facilities
+          </a>
+          <ul class="dropdown-menu">
+            <li>
+              <a class="dropdown-item" routerLink="/facilities/educational-facilities"
+                >Educational Facilities</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" routerLink="/facilities/sports-facilities"
+                >Sports Facilities</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" routerLink="/facilities/counselling-center">Counselling Facilities</a>
+            </li>
+
+            <li>
+              <a class="dropdown-item" routerLink="/facilities/day-scholar-school"
+                >Day Scholar School</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" routerLink="/facilities/transport-facilities">Transport Facility</a>
+            </li>
+            
+          </ul>
+        </li>
+
+        
+        <li class="nav-item">
+          <a class="nav-link fw-semibold" routerLink="/gurukul">Gurukul</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link fw-semibold" routerLink="/skill-development">Skill Development</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link fw-semibold" routerLink="/academics">Academic</a>
+        </li>
+         <li class="nav-item">
+          <a class="nav-link fw-semibold" routerLink="/achievements">Achievements</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fw-semibold" routerLink="/admissions">Admissions</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fw-semibold" routerLink="/contact-us">Contact Us</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="bg-warning" style="height: 4px"></div>
