@@ -1,1 +1,19 @@
-<p>academics works!</p>
+<div class="d-flex justify-content-center align-items-center gap-3 mb-2 mt-3">
+  <button class="btn btn-primary" (click)="prevPage()">⟨ Prev</button>
+  <span>{{ page }} / {{ totalPages }}</span>
+  <button class="btn btn-primary" (click)="nextPage()">Next ⟩</button>
+  <button class="btn btn-outline-primary" (click)="zoom -= 0.1">−</button>
+    <span>Zoom: {{ zoom | number:'1.1-1' }}</span>
+    <button class="btn btn-outline-primary" (click)="zoom += 0.1">+</button>
+</div>
+
+<div class="pdf-viewer m-4 p-4">
+  <pdf-viewer
+    [src]="pdfSrc"
+    [page]="page"
+    [zoom]="zoom"
+    [show-all]="false"
+    (after-load-complete)="afterLoad($event)"
+    class="pdf">
+  </pdf-viewer>
+</div>

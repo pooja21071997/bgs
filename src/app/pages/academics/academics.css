@@ -1,0 +1,14 @@
+.flip-container {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#flipbook {
+  width: 90vw;
+  height: 85vh;
+}
+
+.page {
+  background: #fff;
+}
