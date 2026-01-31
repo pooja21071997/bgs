@@ -19,11 +19,11 @@
     <div class="collapse navbar-collapse" id="mainNavbar">
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link fw-semibold" routerLink="/">HOME</a>
+          <a class="nav-link fw-semibold" (click)="closeNavbar()" routerLink="/">HOME</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link fw-semibold" routerLink="/about">ABOUT US</a>
+          <a class="nav-link fw-semibold" (click)="closeNavbar()" routerLink="/about">ABOUT US</a>
         </li>
 
         <!-- SECTION Dropdown -->
@@ -33,47 +33,70 @@
           </a>
           <ul class="dropdown-menu">
             <li>
-              <a class="dropdown-item" routerLink="/facilities/educational-facilities"
+              <a
+                class="dropdown-item"
+                (click)="closeNavbar()"
+                routerLink="/facilities/educational-facilities"
                 >Educational Facilities</a
               >
             </li>
             <li>
-              <a class="dropdown-item" routerLink="/facilities/sports-facilities"
+              <a
+                class="dropdown-item"
+                (click)="closeNavbar()"
+                routerLink="/facilities/sports-facilities"
                 >Sports Facilities</a
               >
             </li>
             <li>
-              <a class="dropdown-item" routerLink="/facilities/counselling-center">Counselling Facilities</a>
+              <a
+                class="dropdown-item"
+                (click)="closeNavbar()"
+                routerLink="/facilities/counselling-center"
+                >Counselling Facilities</a
+              >
             </li>
 
             <li>
-              <a class="dropdown-item" routerLink="/facilities/day-scholar-school"
+              <a
+                class="dropdown-item"
+                (click)="closeNavbar()"
+                routerLink="/facilities/day-scholar-school"
                 >Day Scholar School</a
               >
             </li>
             <li>
-              <a class="dropdown-item" routerLink="/facilities/transport-facilities">Transport Facility</a>
+              <a
+                class="dropdown-item"
+                (click)="closeNavbar()"
+                routerLink="/facilities/transport-facilities"
+                >Transport Facility</a
+              >
             </li>
-            
           </ul>
         </li>
 
-        
         <li class="nav-item">
-          <a class="nav-link fw-semibold" routerLink="/gurukul">Gurukul</a>
+          <a class="nav-link fw-semibold" (click)="closeNavbar()" routerLink="/gurukul">Gurukul</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link fw-semibold" routerLink="/skill-development">Skill Development</a>
+          <a class="nav-link fw-semibold" (click)="closeNavbar()" routerLink="/skill-development"
+            >Skill Development</a
+          >
         </li>
 
         <li class="nav-item">
-          <a class="nav-link fw-semibold" routerLink="/academics">Academic</a>
+          <a class="nav-link fw-semibold" (click)="closeNavbar()" routerLink="/academics"
+            >Academic</a
+          >
         </li>
-         <li class="nav-item">
-          <a class="nav-link fw-semibold" routerLink="/achievements">Achievements</a>
+        <li class="nav-item">
+          <a class="nav-link fw-semibold" (click)="closeNavbar()" routerLink="/achievements"
+            >Achievements</a
+          >
         </li>
-       <li class="nav-item fw-semibold">
+        <li class="nav-item fw-semibold">
           <a
             class="nav-link"
             href="https://bgsv.prisms.in/onlineadmission"
@@ -84,7 +107,9 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link fw-semibold" routerLink="/contact-us">Contact Us</a>
+          <a class="nav-link fw-semibold" (click)="closeNavbar()" routerLink="/contact-us"
+            >Contact Us</a
+          >
         </li>
       </ul>
     </div>
