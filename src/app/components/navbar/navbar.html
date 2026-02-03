@@ -19,11 +19,11 @@
     <div class="collapse navbar-collapse" id="mainNavbar">
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link fw-semibold" (click)="closeNavbar()" routerLink="/">HOME</a>
+          <a class="nav-link fw-semibold" (click)="closeNavbar()" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"  routerLink="/">HOME</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link fw-semibold" (click)="closeNavbar()" routerLink="/about">ABOUT US</a>
+          <a class="nav-link fw-semibold" (click)="closeNavbar()" routerLinkActive="active" routerLink="/about">ABOUT US</a>
         </li>
 
         <!-- SECTION Dropdown -->
@@ -35,7 +35,7 @@
             <li>
               <a
                 class="dropdown-item"
-                (click)="closeNavbar()"
+                (click)="closeNavbar()" routerLinkActive="active"
                 routerLink="/facilities/educational-facilities"
                 >Educational Facilities</a
               >
@@ -43,7 +43,7 @@
             <li>
               <a
                 class="dropdown-item"
-                (click)="closeNavbar()"
+                (click)="closeNavbar()" routerLinkActive="active"
                 routerLink="/facilities/sports-facilities"
                 >Sports Facilities</a
               >
@@ -51,7 +51,7 @@
             <li>
               <a
                 class="dropdown-item"
-                (click)="closeNavbar()"
+                (click)="closeNavbar()" routerLinkActive="active"
                 routerLink="/facilities/counselling-center"
                 >Counselling Facilities</a
               >
@@ -60,7 +60,7 @@
             <li>
               <a
                 class="dropdown-item"
-                (click)="closeNavbar()"
+                (click)="closeNavbar()" routerLinkActive="active"
                 routerLink="/facilities/day-scholar-school"
                 >Day Scholar School</a
               >
@@ -68,7 +68,7 @@
             <li>
               <a
                 class="dropdown-item"
-                (click)="closeNavbar()"
+                (click)="closeNavbar()" routerLinkActive="active"
                 routerLink="/facilities/transport-facilities"
                 >Transport Facility</a
               >
@@ -77,22 +77,22 @@
         </li>
 
         <li class="nav-item">
-          <a class="nav-link fw-semibold" (click)="closeNavbar()" routerLink="/gurukul">Gurukul</a>
+          <a class="nav-link fw-semibold" (click)="closeNavbar()" routerLinkActive="active" routerLink="/gurukul">Gurukul</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link fw-semibold" (click)="closeNavbar()" routerLink="/skill-development"
+          <a class="nav-link fw-semibold" (click)="closeNavbar()" routerLinkActive="active" routerLink="/skill-development"
             >Skill Development</a
           >
         </li>
 
         <li class="nav-item">
-          <a class="nav-link fw-semibold" (click)="closeNavbar()" routerLink="/academics"
+          <a class="nav-link fw-semibold" (click)="closeNavbar()" routerLinkActive="active" routerLink="/academics"
             >Academic</a
           >
         </li>
         <li class="nav-item">
-          <a class="nav-link fw-semibold" (click)="closeNavbar()" routerLink="/achievements"
+          <a class="nav-link fw-semibold" (click)="closeNavbar()" routerLinkActive="active" routerLink="/achievements"
             >Achievements</a
           >
         </li>
@@ -102,12 +102,13 @@
             href="https://bgsv.prisms.in/onlineadmission"
             target="_blank"
             rel="noopener"
+            routerLinkActive="active"
           >
             Admission
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link fw-semibold" (click)="closeNavbar()" routerLink="/contact-us"
+          <a class="nav-link fw-semibold" (click)="closeNavbar()" routerLinkActive="active" routerLink="/contact-us"
             >Contact Us</a
           >
         </li>
