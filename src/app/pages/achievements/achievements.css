@@ -1,0 +1,152 @@
+/* ================= WRAPPER ================= */
+
+.achievements-wrapper {
+  position: relative;
+  padding: 100px 0;
+  background: linear-gradient(135deg, #f8fbff, #eef4ff);
+  overflow: hidden;
+}
+
+/* Subtle animated background glow */
+.achievements-wrapper::before {
+  content: "";
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(201,162,39,0.15), transparent);
+  top: -100px;
+  right: -100px;
+  animation: floatGlow 6s ease-in-out infinite;
+}
+
+@keyframes floatGlow {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(20px); }
+}
+
+/* ================= HEADING ================= */
+
+.achievement-heading {
+  font-size: 34px;
+  font-weight: 700;
+  color: #0b3d91;
+  position: relative;
+  display: inline-block;
+  animation: fadeSlide 1s ease forwards;
+}
+
+.heading-line {
+  width: 0;
+  height: 4px;
+  background: linear-gradient(to right, #c9a227, #0b3d91);
+  margin-top: 12px;
+  border-radius: 5px;
+  animation: lineGrow 1s ease forwards;
+  animation-delay: 0.5s;
+}
+
+@keyframes lineGrow {
+  to { width: 100px; }
+}
+
+/* ================= CARD ================= */
+
+.achievement-card {
+  background: #ffffff;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.5s ease;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.06);
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+/* Scroll Reveal */
+.achievement-card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hover effect */
+.achievement-card:hover {
+  transform: translateY(-12px) scale(1.03);
+  box-shadow: 0 30px 70px rgba(11,61,145,0.15);
+}
+
+/* Gold animated border */
+.achievement-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  padding: 2px;
+  background: linear-gradient(120deg, #c9a227, transparent, #c9a227);
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.achievement-card:hover::before {
+  opacity: 1;
+}
+
+/* ================= IMAGE ================= */
+
+.image-box {
+  position: relative;
+  overflow: hidden;
+}
+
+.image-box img {
+  width: 100%;
+  transition: transform 0.7s ease;
+}
+
+.achievement-card:hover img {
+  transform: scale(1.1);
+}
+
+/* Shine effect */
+.image-box::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(120deg,
+    rgba(255,255,255,0.3),
+    rgba(255,255,255,0.1),
+    transparent);
+  transform: skewX(-25deg);
+}
+
+.achievement-card:hover .image-box::after {
+  animation: shine 1s forwards;
+}
+
+@keyframes shine {
+  100% { left: 150%; }
+}
+
+/* ================= CONTENT ================= */
+
+.achievement-content {
+  padding: 20px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 14px;
+  color: #1f2d3d;
+}
+
+/* ================= ANIMATIONS ================= */
+
+@keyframes fadeSlide {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}

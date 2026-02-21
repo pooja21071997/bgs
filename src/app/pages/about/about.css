@@ -1,0 +1,517 @@
+/* Section Background */
+.about-section {
+  background: linear-gradient(135deg, #eef2ff, #fdf2f8);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Decorative Floating Shapes */
+.about-section::before,
+.about-section::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 77, 166, 0.12);
+  animation: float 6s infinite alternate ease-in-out;
+}
+
+.about-section::before {
+  width: 220px;
+  height: 220px;
+  top: -60px;
+  right: -60px;
+}
+
+.about-section::after {
+  width: 180px;
+  height: 180px;
+  bottom: -50px;
+  left: -50px;
+}
+
+@keyframes float {
+  from { transform: translateY(0px); }
+  to { transform: translateY(20px); }
+}
+
+/* Image Styling */
+.about-image-wrapper {
+  overflow: hidden;
+  border-radius: 25px;
+  transition: 0.6s ease;
+}
+
+.about-img {
+  border-radius: 25px;
+  transition: transform 0.6s ease, box-shadow 0.6s ease;
+}
+
+.about-image-wrapper:hover .about-img {
+  transform: scale(1.05);
+  box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+}
+
+/* Content */
+.about-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #1e3c72;
+}
+
+.about-title i {
+  color: #ff4da6;
+}
+
+.heading-line {
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #1e3c72, #ff4da6);
+  margin: 12px 0 25px;
+  border-radius: 10px;
+  animation: expandLine 1.2s ease forwards;
+}
+
+@keyframes expandLine {
+  from { width: 0; }
+  to { width: 80px; }
+}
+
+.about-content p {
+  color: #555;
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 15px;
+}
+
+/* Fade In Animation */
+.about-content {
+  animation: fadeUp 1s ease-in-out;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Section Background - Light Academic */
+.inspiration-section {
+  background: linear-gradient(135deg, #eef2ff, #fdf2f8);
+  position: relative;
+  overflow: hidden;
+  padding: 80px 0;
+}
+
+/* Soft Decorative Light Shape */
+.inspiration-section::before {
+  content: "";
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  background: rgba(30, 60, 114, 0.08);
+  border-radius: 50%;
+  top: -80px;
+  right: -80px;
+  animation: floatLight 6s infinite alternate ease-in-out;
+}
+
+@keyframes floatLight {
+  from { transform: translateY(0px); }
+  to { transform: translateY(20px); }
+}
+
+/* Quote Card */
+.quote-card {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  padding: 50px;
+  border-radius: 25px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+  animation: fadeUp 1s ease-in-out;
+}
+
+/* Quote Icon */
+.quote-icon {
+  font-size: 60px;
+  margin-bottom: 20px;
+
+  background: linear-gradient(90deg, #1e3c72, #ff4da6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Gradient Quote Text */
+.quote-text {
+  font-size: 26px;
+  font-style: italic;
+  line-height: 1.8;
+
+  background: linear-gradient(90deg, #1e3c72, #ff4da6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Gradient Author Name */
+.quote-author {
+  margin-top: 25px;
+  font-weight: 600;
+  font-size: 18px;
+
+  background: linear-gradient(90deg, #ff4da6, #1e3c72);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Founder Image */
+.founder-image-wrapper {
+  overflow: hidden;
+  border-radius: 25px;
+}
+
+.founder-img {
+  border-radius: 25px;
+  transition: transform 0.6s ease, box-shadow 0.6s ease;
+  max-height: 550px;
+  object-fit: cover;
+}
+
+.founder-image-wrapper:hover .founder-img {
+  transform: scale(1.05);
+  box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+}
+
+/* Fade Animation */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Section Background */
+.motto-mission-section {
+  background: linear-gradient(135deg, #eef2ff, #fdf2f8);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Decorative soft floating circle */
+.motto-mission-section::before {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: rgba(255, 77, 166, 0.08);
+  border-radius: 50%;
+  top: -80px;
+  left: -80px;
+  animation: float 6s infinite alternate ease-in-out;
+}
+
+@keyframes float {
+  from { transform: translateY(0); }
+  to { transform: translateY(25px); }
+}
+
+/* Card */
+.mm-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  padding: 50px 35px;
+  border-radius: 25px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s ease;
+}
+
+.mm-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+/* Icon */
+.mm-icon {
+  width: 110px;
+  height: 110px;
+  margin: 0 auto 25px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #1e3c72, #ff4da6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 45px;
+  color: #fff;
+  animation: glowPulse 2s infinite alternate;
+  transition: 0.4s ease;
+}
+
+.mm-card:hover .mm-icon {
+  transform: rotateY(180deg) scale(1.1);
+}
+
+/* Gradient Title */
+.mm-title {
+  font-weight: 700;
+  font-size: 30px;
+  margin-bottom: 10px;
+
+  background: linear-gradient(90deg, #1e3c72, #ff4da6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Heading Line */
+.heading-line {
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #1e3c72, #ff4da6);
+  border-radius: 10px;
+  margin-bottom: 25px;
+}
+
+/* Text */
+.mm-card p {
+  color: #555;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+/* Glow Animation */
+@keyframes glowPulse {
+  from {
+    box-shadow: 0 0 10px rgba(255, 77, 166, 0.5);
+  }
+  to {
+    box-shadow: 0 0 25px rgba(30, 60, 114, 0.8);
+  }
+}
+/* Section Background */
+.subsection-highlight {
+  background: linear-gradient(135deg, #eef2ff, #fdf2f8);
+  position: relative;
+  overflow: hidden;
+  padding: 80px 0;
+}
+
+/* Decorative floating shape */
+.subsection-highlight::before {
+  content: "";
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  background: rgba(30, 60, 114, 0.08);
+  border-radius: 50%;
+  top: -60px;
+  right: -60px;
+  animation: float 6s infinite alternate ease-in-out;
+}
+
+@keyframes float {
+  from { transform: translateY(0); }
+  to { transform: translateY(20px); }
+}
+
+/* Section Title */
+.section-title {
+  font-size: 34px;
+  font-weight: 700;
+
+  background: linear-gradient(90deg, #1e3c72, #ff4da6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Underline */
+.heading-line {
+  width: 90px;
+  height: 4px;
+  background: linear-gradient(90deg, #1e3c72, #ff4da6);
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+/* Card */
+.sub-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  padding: 40px 25px;
+  border-radius: 25px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.07);
+  transition: all 0.4s ease;
+}
+
+.sub-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+/* Icon Circle */
+.sub-icon {
+  width: 95px;
+  height: 95px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #1e3c72, #ff4da6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px;
+  color: #fff;
+  transition: 0.4s ease;
+  animation: glowPulse 2s infinite alternate;
+}
+
+.sub-card:hover .sub-icon {
+  transform: rotateY(180deg) scale(1.1);
+}
+
+/* Text */
+.sub-card h4 {
+  font-weight: 600;
+  color: #1e3c72;
+  margin-bottom: 15px;
+}
+
+.sub-card p {
+  color: #555;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* Glow animation */
+@keyframes glowPulse {
+  from {
+    box-shadow: 0 0 10px rgba(255, 77, 166, 0.5);
+  }
+  to {
+    box-shadow: 0 0 25px rgba(30, 60, 114, 0.8);
+  }
+}
+/* Gurukul Section */
+.gurukul-section {
+  background: linear-gradient(120deg, #e3f2fd, #fce4ec);
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Floating icons animation */
+.floating-icon {
+  position: absolute;
+  width: 50px;
+  opacity: 0.6;
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+/* Gurukul image styling */
+.gurukul-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  transition: transform 0.5s ease;
+}
+
+/* Image hover effect */
+.gurukul-img:hover {
+  transform: scale(1.05);
+}
+
+/* Heading underline */
+.line {
+  width: 60px;
+  height: 4px;
+  background-color: #ff1744;
+  border-radius: 2px;
+  margin-bottom: 15px;
+}
+/* Floating icons animation */
+.floating-icon {
+  position: absolute;
+  font-size: 2rem;   /* adjust size */
+  color: rgba(255, 23, 68, 0.7); /* subtle color */
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+/* Rest of the styling remains same */
+.gurukul-section {
+  background: linear-gradient(120deg, #e3f2fd, #fce4ec);
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+}
+
+.gurukul-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  transition: transform 0.5s ease;
+}
+
+.gurukul-img:hover {
+  transform: scale(1.05);
+}
+
+.line {
+  width: 60px;
+  height: 4px;
+  background-color: #ff1744;
+  border-radius: 2px;
+  margin-bottom: 15px;
+}
+
+/* Container style */
+.stats-section {
+  background: #f9faff;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  padding: 2rem 1rem;
+}
+
+/* Fade-in and slide-up */
+.stat-card {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+.stat-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Icon hover effect */
+.icon {
+  transition: transform 0.5s ease;
+}
+
+.stat-card:hover .icon {
+  transform: scale(1.2) rotate(10deg);
+}
+
+.iconStat{
+  background: linear-gradient(90deg, #938cac, #e84699);
+  -webkit-background-clip: text; /* For Chrome, Safari */
+  -webkit-text-fill-color: transparent; /* Makes text show the gradient */
+  background-clip: text; /* For Firefox */
+  color: transparent; /* Fallback */
+  font-weight: bold; /* Optional for better visibility */
+}

@@ -1,0 +1,160 @@
+/* ================= SECTION BACKGROUND ================= */
+
+/* ================= LIGHT PREMIUM BACKGROUND ================= */
+
+.section-wrapper {
+  position: relative;
+  padding: 80px 0;
+  background: linear-gradient(135deg, #f8fbff 0%, #eef3fb 100%);
+}
+
+/* Soft background decorative shapes */
+.section-wrapper::before,
+.section-wrapper::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  z-index: 0;
+  opacity: 0.15;
+}
+
+.section-wrapper::before {
+  width: 300px;
+  height: 300px;
+  background: #1e5bb8;
+  top: -80px;
+  left: -80px;
+}
+
+.section-wrapper::after {
+  width: 250px;
+  height: 250px;
+  background: #c9a227;
+  bottom: -60px;
+  right: -60px;
+}
+/* ================= CARD STYLE ================= */
+
+.section-card {
+  position: relative;
+  z-index: 2;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 40px;
+  margin-bottom: 50px;
+  transition: all 0.4s ease;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+}
+
+.section-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 60px rgba(11, 61, 145, 0.08);
+}
+/* ================= IMAGE ================= */
+
+.image-wrapper {
+  overflow: hidden;
+  border-radius: 20px;
+  position: relative;
+}
+
+.image-wrapper img {
+  transition: transform 0.8s ease;
+}
+
+.section-card:hover img {
+  transform: scale(1.1);
+}
+
+/* ================= CONTENT ================= */
+
+.content-wrapper {
+  position: relative;
+  color: #1f2d3d;
+}
+
+/* Left Accent Animated Bar */
+.content-wrapper::before {
+  content: "";
+  position: absolute;
+  left: -20px;
+  top: 0;
+  height: 100%;
+  width: 5px;
+  background: linear-gradient(to bottom, #c9a227, #ffffff);
+  border-radius: 10px;
+  animation: barGlow 3s infinite ease-in-out;
+}
+
+@keyframes barGlow {
+  0%, 100% { opacity: 0.7; }
+  50% { opacity: 1; }
+}
+
+/* ================= HEADING ================= */
+
+.section-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #0b3d91;
+  position: relative;
+  display: inline-block;
+  animation: slideIn 0.8s ease forwards;
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 0;
+  height: 3px;
+  background: #c9a227;
+  border-radius: 5px;
+  animation: underlineGrow 1s ease forwards;
+  animation-delay: 0.6s;
+}
+
+@keyframes underlineGrow {
+  to { width: 60%; }
+}
+
+/* ================= PARAGRAPH ================= */
+
+.content-wrapper p {
+  margin-top: 20px;
+  line-height: 1.8;
+  font-size: 1.05rem;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 1s ease forwards;
+  animation-delay: 1s;
+}
+
+/* ================= ICON ================= */
+
+.icon-overlay {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 2rem;
+  color: #c9a227;
+  opacity: 0.4;
+  transition: 0.5s ease;
+}
+
+.section-card:hover .icon-overlay {
+  opacity: 1;
+  transform: rotate(10deg) scale(1.2);
+}
+
+/* ================= ANIMATIONS ================= */
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(-30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeUp {
+  to { opacity: 1; transform: translateY(0); }
+}

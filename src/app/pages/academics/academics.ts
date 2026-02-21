@@ -35,11 +35,37 @@ fitToPage() {
 }
 
 nextPage() {
-  if (this.page < this.totalPages) this.page++;
-}
+    if (this.page < this.totalPages) {
+      this.page++;
+      this.animatePage();
+    }
+  }
 
-prevPage() {
-  if (this.page > 1) this.page--;
-}
+  prevPage() {
+    if (this.page > 1) {
+      this.page--;
+      this.animatePage();
+    }
+  }
+
+  animatePage() {
+    const viewer = document.querySelector('.pdf-card');
+    viewer?.classList.add('fade');
+    setTimeout(() => {
+      viewer?.classList.remove('fade');
+    }, 400);
+  }
+
+  zoomIn() {
+    if (this.zoom < 2) {
+      this.zoom += 0.1;
+    }
+  }
+
+  zoomOut() {
+    if (this.zoom > 0.3) {
+      this.zoom -= 0.1;
+    }
+  }
 
 }

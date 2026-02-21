@@ -1,19 +1,25 @@
-<div class="d-flex justify-content-center align-items-center gap-3 mb-2 mt-3">
-  <button class="btn btn-primary" (click)="prevPage()">⟨ Prev</button>
-  <span>{{ page }} / {{ totalPages }}</span>
-  <button class="btn btn-primary" (click)="nextPage()">Next ⟩</button>
-  <button class="btn btn-outline-primary" (click)="zoom -= 0.1">−</button>
-    <span>Zoom: {{ zoom | number:'1.1-1' }}</span>
-    <button class="btn btn-outline-primary" (click)="zoom += 0.1">+</button>
-</div>
+<section class="pdf-section">
 
-<div class="pdf-viewer m-4 p-4">
-  <pdf-viewer
-    [src]="pdfSrc"
-    [page]="page"
-    [zoom]="zoom"
-    [show-all]="false"
-    (after-load-complete)="afterLoad($event)"
-    class="pdf">
-  </pdf-viewer>
-</div>
+  <!-- Controls -->
+  <div class="controls d-flex justify-content-center align-items-center gap-3 mb-3">
+    <button class="nav-btn" (click)="prevPage()">⟨ Prev</button>
+
+    <span class="page-indicator">
+      {{ page }} / {{ totalPages }}
+    </span>
+
+    <button class="nav-btn" (click)="nextPage()">Next ⟩</button>
+
+    <div class="zoom-controls">
+      <button class="zoom-btn" (click)="zoomOut()">−</button>
+      <span class="text-dark mx-2">Zoom: {{ zoom | number:'1.1-1' }}</span>
+      <button class="zoom-btn" (click)="zoomIn()">+</button>
+    </div>
+  </div>
+
+  <!-- PDF Viewer Card -->
+  <div class="pdf-card">
+    <pdf-viewer [src]="pdfSrc" [page]="page" [zoom]="zoom" [show-all]="false" (after-load-complete)="afterLoad($event)" class="pdf"> </pdf-viewer>
+  </div>
+
+</section>

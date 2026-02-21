@@ -1,14 +1,123 @@
-.flip-container {
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
+/* ===========================
+   SECTION BACKGROUND
+=========================== */
+
+.pdf-section {
+  min-height: 100vh;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #f3f3f5, #fdfdfd);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-#flipbook {
-  width: 90vw;
-  height: 85vh;
+/* ===========================
+   CONTROLS
+=========================== */
+
+.controls {
+  flex-wrap: wrap;
+  animation: slideDown 0.8s ease;
 }
 
-.page {
-  background: #fff;
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Navigation Buttons */
+.nav-btn {
+  background: linear-gradient(135deg, #f755a0, #e94699);
+  border: none;
+  padding: 8px 20px;
+  border-radius: 30px;
+  color: black;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.nav-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(18, 153, 180, 0.4);
+}
+
+/* Zoom Buttons */
+.zoom-btn {
+  background: white;
+  border: 2px solid #e94699;
+  padding: 4px 12px;
+  border-radius: 50%;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.zoom-btn:hover {
+  background: #e94699;
+  color: black;
+  box-shadow: 0 0 15px #f8c7e1;
+}
+
+/* Page Indicator */
+.page-indicator {
+  font-weight: 600;
+  color: black;
+  font-size: 18px;
+  animation: fadeIn 0.6s ease;
+}
+
+/* ===========================
+   PDF CARD
+=========================== */
+
+.pdf-card {
+  width: 90%;
+  max-width: 1000px;
+  height: 80vh;              /* IMPORTANT */
+  padding: 20px;
+  border-radius: 20px;
+ background: linear-gradient(135deg, #e94699, #1299b4);
+  /* backdrop-filter: blur(15px); */
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.4),
+    0 0 30px rgba(18, 153, 180, 0.3);
+  overflow: hidden;          /* IMPORTANT */
+}
+
+.pdf-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Fade animation on page change */
+.pdf-card.fade {
+  animation: fadeSwitch 0.4s ease;
+}
+
+@keyframes fadeSwitch {
+  0% { opacity: 0.3; transform: scale(0.98); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* PDF */
+.pdf {
+  display: block;
+  width: 100%;
+  height: 100%;              /* VERY IMPORTANT */
 }
