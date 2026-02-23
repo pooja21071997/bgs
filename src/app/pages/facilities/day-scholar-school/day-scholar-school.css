@@ -1,0 +1,109 @@
+/* ================= SECTION BACKGROUND ================= */
+
+body {
+  background: linear-gradient(135deg, #eef2ff, #f9e7f3);
+}
+
+/* ================= CARD STYLE ================= */
+
+.edu-card {
+  border-radius: 24px;
+  padding: 45px;
+  position: relative;
+  overflow: hidden;
+
+  background: linear-gradient(
+    135deg,
+    rgba(232, 240, 255, 0.95),
+    rgba(246, 217, 232, 0.95)
+  );
+
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s ease;
+}
+
+/* Gradient Top Border */
+.edu-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 6px;
+  width: 100%;
+  background: linear-gradient(90deg, #1e3c72, #d63384);
+}
+
+/* Hover Effect */
+.edu-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.15);
+}
+
+/* Smooth Gradient Animation */
+.edu-card {
+  background-size: 200% 200%;
+  animation: gradientMove 10s ease infinite;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ================= HEADING STYLE ================= */
+
+.edu-card h2 {
+  font-weight: 700;
+  background: linear-gradient(90deg, #1e3c72, #d63384);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Decorative Line */
+.line {
+  width: 70px;
+  height: 4px;
+  background: linear-gradient(90deg, #1e3c72, #d63384);
+  border-radius: 3px;
+  margin-top: 8px;
+  margin-bottom: 20px;
+}
+.edu-card:hover .line {
+  width: 120px;
+}
+/* Image Style */
+.edu-card img {
+  border-radius: 18px;
+  transition: transform 0.4s ease;
+}
+
+.edu-card :hover img {
+  transform: scale(1.04);
+}
+/* Initial Hidden State */
+.reveal {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: all 0.8s ease;
+}
+
+/* When Visible */
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* Icon Badge */
+.edu-icon {
+  background: linear-gradient(to right, #1e3c72, #d63384);
+  color: white;
+  padding: 12px;
+  border-radius: 50%;
+  font-size: 16px;
+  transition: transform 0.4s ease;
+}
+
+/* Icon rotate on hover */
+.edu-card:hover .edu-icon {
+  transform: rotate(12deg) scale(1.1);
+}

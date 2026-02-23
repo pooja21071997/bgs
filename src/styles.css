@@ -10,9 +10,9 @@
 
 /* style applied when the TS adds .active on the link */
 .navbar-nav .nav-link.active {
-  color: #007bff !important;
+  color: #e94699 !important;
   font-weight: bold;
-  border-bottom: 2px solid #007bff;
+  border-bottom: 2px solid #f744a0;
 }
 
 /* normal state */
@@ -125,26 +125,3 @@
   color: #333;
   transition: color 0.4s ease;
 }
-.icon-wrapper {
-  position: relative;
-  display: inline-block;
-}
-
-.icon-circle {
-  position: absolute;
-  top: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 55px;
-  height: 55px;
-  background-color: #f9a825; /* orange */
-  border-radius: 50%;
-  z-index: 0;
-}
-
-.icon-wrapper i {
-  position: relative;
-  z-index: 1;
-  color: #444; /* icon color */
-}
-/* Global image hover focus */

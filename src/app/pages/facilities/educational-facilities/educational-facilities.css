@@ -1,0 +1,140 @@
+/* ================= CARD STYLE ================= */
+
+.edu-block {
+  margin-bottom: 80px;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.edu-block.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* CARD CONTAINER */
+
+
+/* ================= GRADIENT GLOW BACKGROUND ================= */
+/* ================= FULL CARD GRADIENT BACKGROUND ================= */
+
+.edu-card {
+  border-radius: 20px;
+  padding: 40px;
+  position: relative;
+  overflow: hidden;
+
+  /* Full gradient background */
+  background: linear-gradient(
+    135deg,
+    rgba(232, 240, 255, 0.9),
+    rgba(246, 217, 232, 0.9)
+  );
+
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s ease;
+}
+
+/* Remove previous glow */
+.edu-card::after {
+  display: none;
+}
+
+/* Hover Effect */
+.edu-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.15);
+}
+
+/* Optional: Subtle animated gradient shift */
+.edu-card {
+  background-size: 200% 200%;
+  animation: gradientShift 8s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+/* Gradient Top Border Accent */
+.edu-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background: linear-gradient(to right, #1e3c72, #d63384);
+}
+
+
+/* IMAGE STYLE */
+.img-box {
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.img-box img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+/* Image Zoom */
+.edu-card:hover .img-box img {
+  transform: scale(1.07);
+}
+
+/* Header */
+.edu-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.edu-header h2 {
+  font-weight: 700;
+  font-size: 26px;
+  background: linear-gradient(to right, #1e3c72, #d63384);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Icon Badge */
+.edu-icon {
+  background: linear-gradient(to right, #1e3c72, #d63384);
+  color: white;
+  padding: 12px;
+  border-radius: 50%;
+  font-size: 16px;
+  transition: transform 0.4s ease;
+}
+
+/* Icon rotate on hover */
+.edu-card:hover .edu-icon {
+  transform: rotate(12deg) scale(1.1);
+}
+
+/* Divider */
+.edu-line {
+  width: 70px;
+  height: 4px;
+  background: linear-gradient(to right, #1e3c72, #d63384);
+  margin: 12px 0 20px;
+  border-radius: 4px;
+  transition: width 0.4s ease;
+}
+
+/* Expand line on hover */
+.edu-card:hover .edu-line {
+  width: 120px;
+}
+
+/* Text */
+.edu-content p {
+  font-size: 16px;
+  line-height: 1.9;
+  color: #444;
+}
