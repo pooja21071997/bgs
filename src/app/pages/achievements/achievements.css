@@ -43,7 +43,7 @@
 .heading-line {
   width: 0;
   height: 4px;
-  background: linear-gradient(to right, #c9a227, #0b3d91);
+  background: linear-gradient(to right, #c92773, #0b3d91);
   margin-top: 12px;
   border-radius: 5px;
   animation: lineGrow 1s ease forwards;
@@ -92,7 +92,7 @@
   inset: 0;
   border-radius: 20px;
   padding: 2px;
-  background: linear-gradient(120deg, #c9a227, transparent, #c9a227);
+  background: linear-gradient(120deg, #2752c9, transparent, #c92798);
   -webkit-mask:
     linear-gradient(#fff 0 0) content-box,
     linear-gradient(#fff 0 0);
